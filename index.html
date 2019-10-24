@@ -7,35 +7,37 @@
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 
     <title>Calculator</title>
+
+    <script src="index.js"></script>
 </head>
 <body> 
     <h1>Basic Calculator</h1>
     <br/>
     <form id="calculator" name="calculator">
-        <input id="display"/> <br/>
-        <input type="button" class="light" value="AC" onclick="calculator.display.value = ''"/>
+        <input id="display" value="0"/> <br/>
+        <input type="button" class="light" value="AC" onclick="clr()"/>
         <input type="button" class="light" value="&#177"/>
-        <input type="button" class="light" value="%" onclick="calculator.display.value += '%'"/>
-        <input type="button" class="orange" value="&#247" onclick="calculator.display.value += '/'"/>
+        <input type="button" class="light" value="%" onclick="dis('%')"/>
+        <input type="button" class="orange" value="&#247" onclick="dis('/')"/>
         <br/>
-        <input type="button" class="dark" value="7" onclick="calculator.display.value += '7'"/>
-        <input type="button" class="dark" value="8" onclick="calculator.display.value += '8'"/>
-        <input type="button" class="dark" value="9" onclick="calculator.display.value += '9'"/>
-        <input type="button" class="orange" value="x" onclick="calculator.display.value += '*'"/>
+        <input type="button" class="dark" value="7" onclick="dis('7')"/>
+        <input type="button" class="dark" value="8" onclick="dis('8')"/>
+        <input type="button" class="dark" value="9" onclick="dis('9')"/>
+        <input type="button" class="orange" value="&#215" onclick="dis('*')"/>
         <br/>
-        <input type="button" class="dark" value="4" onclick="calculator.display.value += '4'"/>
-        <input type="button" class="dark" value="5" onclick="calculator.display.value += '5'"/>
-        <input type="button" class="dark" value="6" onclick="calculator.display.value += '6'"/>
-        <input type="button" class="orange" value="-" onclick="calculator.display.value += '-'"/>
+        <input type="button" class="dark" value="4" onclick="dis('4')"/>
+        <input type="button" class="dark" value="5" onclick="dis('5')"/>
+        <input type="button" class="dark" value="6" onclick="dis('6')"/>
+        <input type="button" class="orange" value="-" onclick="dis('-')"/>
         <br/>
-        <input type="button" class="dark" value="1" onclick="calculator.display.value += '1'"/>
-        <input type="button" class="dark" value="2" onclick="calculator.display.value += '2'"/>
-        <input type="button" class="dark" value="3" onclick="calculator.display.value += '3'"/>
-        <input type="button" class="orange" value="+" onclick="calculator.display.value += '+'"/>
+        <input type="button" class="dark" value="1" onclick="dis('1')"/>
+        <input type="button" class="dark" value="2" onclick="dis('2')"/>
+        <input type="button" class="dark" value="3" onclick="dis('3')"/>
+        <input type="button" class="orange" value="+" onclick="dis('+')"/>
         <br/>
-        <input type="button" class="zero" value="0" onclick="calculator.display.value += '0'"/>
-        <input type="button" class="dark" value="." onclick="calculator.display.value += '.'"/>
-        <input type="button" class="orange" value="=" onclick="calculator.display.value = eval(calculator.display.value)"/>
+        <input type="button" class="zero" value="0" onclick="dis('0')"/>
+        <input type="button" class="dark" value="." onclick="dis('.')"/>
+        <input type="button" class="orange" value="=" onclick="solve()"/>
     </form>
 </body>
 </html>

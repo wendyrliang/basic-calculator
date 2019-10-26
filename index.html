@@ -15,29 +15,29 @@
     <br/>
     <form id="calculator" name="calculator">
         <input id="display" value="0"/> <br/>
-        <input type="button" class="light" value="AC" onclick="clr()"/>
-        <input type="button" class="light" value="&#177"/>
+        <input type="button" id="clear" class="light" value="AC" onclick="clr()"/>
+        <input type="button" class="light" value="&#177" onclick="com()"/>
         <input type="button" class="light" value="%" onclick="dis('%')"/>
-        <input type="button" class="orange" value="&#247" onclick="dis('/')"/>
+        <input type="button" id="divide" class="orange1" value="&#247" onclick="op('divide')"/>
         <br/>
         <input type="button" class="dark" value="7" onclick="dis('7')"/>
         <input type="button" class="dark" value="8" onclick="dis('8')"/>
         <input type="button" class="dark" value="9" onclick="dis('9')"/>
-        <input type="button" class="orange" value="&#215" onclick="dis('*')"/>
+        <input type="button" id="multiply" class="orange1" value="&#215" onclick="op('multiply')"/>
         <br/>
         <input type="button" class="dark" value="4" onclick="dis('4')"/>
         <input type="button" class="dark" value="5" onclick="dis('5')"/>
         <input type="button" class="dark" value="6" onclick="dis('6')"/>
-        <input type="button" class="orange" value="-" onclick="dis('-')"/>
+        <input type="button" id="minus" class="orange1" value="-" onclick="op('minus')"/>
         <br/>
         <input type="button" class="dark" value="1" onclick="dis('1')"/>
         <input type="button" class="dark" value="2" onclick="dis('2')"/>
         <input type="button" class="dark" value="3" onclick="dis('3')"/>
-        <input type="button" class="orange" value="+" onclick="dis('+')"/>
+        <input type="button" id="plus" class="orange1" value="+" onclick="op('plus')"/>
         <br/>
         <input type="button" class="zero" value="0" onclick="dis('0')"/>
         <input type="button" class="dark" value="." onclick="dis('.')"/>
-        <input type="button" class="orange" value="=" onclick="solve()"/>
+        <input type="button" class="orange1" value="=" onclick="solve()"/>
     </form>
 </body>
 </html>

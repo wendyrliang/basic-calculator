@@ -46,11 +46,14 @@ function solve() {
     errorList = ['0', '0.', '-0'];
     if (err === true) {
         document.getElementById('display').value = 'Error';
+        num1 = undefined;
+        operation = undefined;
+        num2 = false;
     } else if (operation) {
         let x = document.getElementById('display').value;
         if (errorList.includes(x) && operation == 'divide') {
             document.getElementById('display').value = 'Error';
-            err = ture;
+            err = true;
         } else {
             let y = '';
             if (operation === 'divide') {
@@ -85,17 +88,21 @@ function clr() {
 
 // Function that handles +/- button
 function com() {
-    let value = document.getElementById('display').value;
-    if (value === '0') {
-        value = '-0';
-    } else if (value === '0.') {
-        value = '-0.';
-    } else if (value === '-0.') {
-        value = '0.';
+    if (err === true) {
+        document.getElementById('display').value = '-0';
     } else {
-        value = -value;
+        let value = document.getElementById('display').value;
+        if (value === '0') {
+            value = '-0';
+        } else if (value === '0.') {
+            value = '-0.';
+        } else if (value === '-0.') {
+            value = '0.';
+        } else {
+            value = -value;
+        }
+        document.getElementById('display').value = value;   
     }
-    document.getElementById('display').value = value;
 }
 
 // Function that handles operation buttons onclick event
